@@ -1,0 +1,93 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/attributions";
+
+.main {
+  margin: 4rem auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto auto;
+}
+
+.header {
+  grid-column: 1 / -1;
+  margin-bottom: 6rem;
+}
+
+.image {
+  margin-right: 10%;
+  &__image {
+    width: 100%;
+  }
+}
+
+.details {
+  padding: 2rem;
+  color: $color-white;
+
+  &__h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 3rem;
+  }
+
+  &__p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    padding-bottom: 3rem;
+  }
+
+  &__button {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background-color: $color-white;
+    padding: 2rem 6rem;
+    border-radius: 2rem;
+    color: $color-violet;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-soft-magenta;
+    }
+  }
+}
+
+.footer {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 4rem;
+  justify-content: flex-end;
+}
+
+.fa-brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $color-white;
+  color: $color-white;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  transform: scale(1.8);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    border: 1px solid $color-soft-magenta;
+    color: $color-soft-magenta;
+  }
+}
